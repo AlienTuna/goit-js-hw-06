@@ -32,10 +32,25 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const ulEl = document.querySelector("#ingredients")
+// варивнт 1
+// const els = []
 
-ingredients.forEach(element => {
-  const newEl = document.createElement('li');
-  newEl.textContent = element;
-  newEl.classList.add('item')
-  document.querySelector("#ingredients").appendChild(newEl)
+// ingredients.forEach(element => {
+//   const newEl = document.createElement('li');
+//   newEl.textContent = element;
+//   newEl.classList.add('item')
+
+//   els.push(newEl)
+// });
+// ulEl.append(...els)
+
+// вариант 2
+const elements = ingredients.map( elem => {
+    const newEl = document.createElement('li');
+    newEl.textContent = elem;
+    newEl.classList.add('item')
+    return newEl
 });
+
+ulEl.append(...elements);
