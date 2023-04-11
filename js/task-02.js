@@ -33,7 +33,7 @@ const ingredients = [
   'Condiments',
 ];
 const ulEl = document.querySelector("#ingredients")
-// варивнт 1
+// вариант 1
 // const els = []
 
 // ingredients.forEach(element => {
