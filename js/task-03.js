@@ -38,9 +38,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const ulEl = document.querySelector('ul.gallery');
 
-const imgAdd = images
-  .map(({ url, alt }) => `<img src="${url}" alt="${alt}" class="gallery-el-img">`)
-  .join("");
+const createGallery = imgs => {
+  return imgs.map(({ url, alt }) => `<img src="${url}" alt="${alt}" class="gallery-el-img">`).join("")
+}
+
+const ulEl = document.querySelector('ul.gallery');
+const imgAdd = createGallery(images);
 ulEl.insertAdjacentHTML("beforeend", imgAdd)
